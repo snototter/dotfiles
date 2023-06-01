@@ -114,7 +114,22 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -alF'
+
 alias dotconfig='/usr/bin/git --git-dir=$HOME/.dotcfg/ --work-tree=$HOME'
+
+alias gheat='git heatmap'
+alias gcom='git commit'
+alias gsup='git status'
+alias goto='git checkout'
+alias branches='git branch -v'
+alias firewood='for remote in `git branch -r`; do git branch --track ${remote#origin/} $remote; done'
+alias remotes='git remote -v'
+alias forgotsubmodules='git submodule update --init'
+
+alias tree="tree -aI '.git|node_modules|resources'"
+
+alias grep='grep --color=auto'
+
 
 # Enable color output for ctest/googletest
 export GTEST_COLOR=1
@@ -124,6 +139,10 @@ export PYTHONSTARTUP=~/.pythonrc
 
 # Default reference for custom git aliases in ~/.gitconfig
 export REVIEW_BASE=main
+# git-heatmap requires a rust binary, thus we need to extend the path
+# which can be done this way (see https://stackoverflow.com/a/18077919)
+path+=$HOME/.cargo/bin
+export PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
