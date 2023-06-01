@@ -1,0 +1,13 @@
+[alias]
+    # Adapted from https://blog.jez.io/cli-code-review/
+    # List files which have changed since REVIEW_BASE
+    # REVIEW_BASE must be set before the command or in the shell
+    # configuration
+    files = !git diff --name-only $(git merge-base HEAD \"$REVIEW_BASE\")
+
+    # With stat for interactive use
+    stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
+    
+    # Put heatmap on your path:
+    # https://github.com/jez/git-heatmap/blob/master/git-heatmap
+    # heatmap = git-heatmap

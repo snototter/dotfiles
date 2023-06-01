@@ -95,6 +95,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
+export EDITOR='vim'
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -118,5 +119,12 @@ alias dotconfig='/usr/bin/git --git-dir=$HOME/.dotcfg/ --work-tree=$HOME'
 # Enable color output for ctest/googletest
 export GTEST_COLOR=1
 
+# Python startup
+export PYTHONSTARTUP=~/.pythonrc
+
+# Default reference for custom git aliases in ~/.gitconfig
+export REVIEW_BASE=main
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
