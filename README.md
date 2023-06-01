@@ -22,6 +22,8 @@ My personal dotfiles following the [Atlassian bare repo tutorial](https://www.at
    # User details
    dotconfig config --local user.name "snototter"
    dotconfig config --local user.email "snototter@users.noreply.github.com"
+   # Set upstream branch
+   dotconfig push --set-upstream origin main
    ```
 6. Done, now dotfile changes can be simply tracked:
    ```zsh
