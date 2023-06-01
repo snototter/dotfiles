@@ -15,3 +15,18 @@ My personal dotfiles following the [Atlassian bare repo tutorial](https://www.at
    alias dotconfig='/usr/bin/git --git-dir=$HOME/.dotcfg/ --work-tree=$HOME'
    ```
 4. TODO `dotconfig checkout` - might fail (need to automate user query + backup)
+5. Set repository properties:
+   ```zsh
+   # Hide untracked files
+   dotconfig config --local status.showUntrackedFiles no
+   # User details
+   dotconfig config --local user.name "snototter"
+   dotconfig config --local user.email "snototter@users.noreply.github.com"
+   ```
+6. Done, now dotfile changes can be simply tracked:
+   ```zsh
+   dotconfig status
+   dotconfig add .bashrc
+   dotconfig commit -m "Add bashrc"
+   dotconfig push
+   ```
