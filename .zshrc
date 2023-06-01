@@ -115,5 +115,8 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -alF'
 alias dotconfig='/usr/bin/git --git-dir=$HOME/.dotcfg/ --work-tree=$HOME'
 
+# Enable color output for ctest/googletest
+export GTEST_COLOR=1
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
