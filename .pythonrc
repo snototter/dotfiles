@@ -1,1 +1,11 @@
+# Standard packages
+import os
+import sys
+import time
+import datetime
 import numpy as np
+from pathlib import Path
+
+# Auto completion
+import rlcompleter, readline
+readline.parse_and_bind('tab:complete')
